@@ -1,0 +1,6 @@
+{
+  "name": "PokéSphere Explorer",
+  "description": "Modern responsive Pokémon Explorer and Pokédex application featuring comprehensive Pokémon stats, moves, abilities, items, elemental types, and full PokeAPI resource exploration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

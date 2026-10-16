@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéSphere Explorer</title>
+    <meta name="description" content="Modern responsive Pokémon Explorer and Pokédex application featuring comprehensive Pokémon stats, moves, abilities, items, elemental types, and full PokeAPI resource exploration." />
+    <meta property="og:title" content="PokéSphere Explorer" />
+    <meta property="og:description" content="Modern responsive Pokémon Explorer and Pokédex application featuring comprehensive Pokémon stats, moves, abilities, items, elemental types, and full PokeAPI resource exploration." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var mode = localStorage.getItem('pokesphere_theme_mode') || 'system';
+          var resolved = mode;
+          if (mode === 'system') {
+            resolved = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', resolved);
+          if (resolved === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          } else {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
+          }
+          document.documentElement.style.colorScheme = resolved;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="antialiased min-h-screen selection:bg-[#E53935]/25 selection:text-[#E53935]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

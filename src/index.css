@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="light"] {
+  --color-primary: #E53935;
+  --color-primary-hover: #C62828;
+  --color-primary-light: #FF5252;
+  --color-primary-glow: rgba(229, 57, 53, 0.2);
+  --color-background: #F5F5F5;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #EEEEEE;
+  --color-surface-card: #FFFFFF;
+  --color-text: #171717;
+  --color-text-secondary: #666666;
+  --color-text-muted: #8E8E93;
+  --color-border: #DDDDDD;
+  --color-border-subtle: #E8E8E8;
+  --color-input-bg: #FFFFFF;
+  --color-badge-bg: #EEEEEE;
+  --color-badge-text: #171717;
+}
+
+[data-theme="dark"] {
+  --color-primary: #E53935;
+  --color-primary-hover: #FF5252;
+  --color-primary-light: #FF7070;
+  --color-primary-glow: rgba(229, 57, 53, 0.35);
+  --color-background: #111111;
+  --color-surface: #1C1C1E;
+  --color-surface-secondary: #292929;
+  --color-surface-card: #1C1C1E;
+  --color-text: #FFFFFF;
+  --color-text-secondary: #B3B3B3;
+  --color-text-muted: #7E7E82;
+  --color-border: #383838;
+  --color-border-subtle: #2C2C2E;
+  --color-input-bg: #141416;
+  --color-badge-bg: #292929;
+  --color-badge-text: #E5E5EA;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom scrollbars that respect the Poké Ball theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Tasteful subtle Pokéball glow effects */
+.pokeball-glow {
+  box-shadow: 0 0 20px var(--color-primary-glow);
+}
+
+.pokeball-glow-lg {
+  box-shadow: 0 10px 30px -5px var(--color-primary-glow);
+}
