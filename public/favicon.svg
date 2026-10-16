@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="redHalf" x1="50" y1="2" x2="50" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EF4444" />
+      <stop offset="60%" stop-color="#E53935" />
+      <stop offset="100%" stop-color="#C62828" />
+    </linearGradient>
+    <linearGradient id="whiteHalf" x1="50" y1="52" x2="50" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#F3F4F6" />
+      <stop offset="100%" stop-color="#E5E7EB" />
+    </linearGradient>
+  </defs>
+  <!-- Outer black border -->
+  <circle cx="50" cy="50" r="48" fill="#111111" />
+  <!-- Top Red Dome -->
+  <path d="M 4 50 A 46 46 0 0 1 96 50 Z" fill="url(#redHalf)" />
+  <!-- Bottom White Dome -->
+  <path d="M 4 50 A 46 46 0 0 0 96 50 Z" fill="url(#whiteHalf)" />
+  <!-- Center Horizontal Band -->
+  <rect x="4" y="45" width="92" height="10" fill="#111111" />
+  <!-- Outer Center Button Ring -->
+  <circle cx="50" cy="50" r="16" fill="#111111" />
+  <!-- Inner White Button Ring -->
+  <circle cx="50" cy="50" r="11" fill="#FFFFFF" />
+  <!-- Core Button -->
+  <circle cx="50" cy="50" r="6" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="1.5" />
+</svg>
